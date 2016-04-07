@@ -95,7 +95,7 @@
 					to = String(to);
 				}
 
-				to = options.format.from( to );
+				to = options.format.from( to, i );
 
 				// Request an update for all links if the value was invalid.
 				// Do so too if setting the handle fails.
@@ -149,7 +149,7 @@
 
 		// Get the value from all handles.
 		for ( i = 0; i < options.handles; i += 1 ){
-			retour[i] = options.format.to( scope_Values[i] );
+			retour[i] = options.format.to( scope_Values[i], i );
 		}
 
 		return inSliderOrder( retour );
